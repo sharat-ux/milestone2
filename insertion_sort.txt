@@ -1,0 +1,32 @@
+public class Solution {  
+
+    public static void insertionSort(int[] arr) {
+    	//Your code goes here
+        int t;
+        for(int i=0;i<arr.length-1;i++)
+        {
+            t=i;
+            for(int j=i+1;j>=0;j--)
+            {
+                
+               if(t>=0 && arr[t]>arr[j])
+               {
+                   //System.out.println(arr[t]+">"+arr[j]);
+                 int temp=arr[j];
+                   arr[j]=arr[t];
+                   arr[t]=temp;
+                   //System.out.println(arr[t]+" "+arr[j]);
+                   t--;
+                   
+               }
+               else
+               {
+                  break;
+                }
+                
+                
+            }
+        }
+    }
+
+}

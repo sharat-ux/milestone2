@@ -1,0 +1,28 @@
+public class Solution {  
+
+    public static int secondLargestElement(int[] arr) {
+    	//Your code goes here
+        int largest=Integer.MIN_VALUE;
+        int second_largest=Integer.MIN_VALUE;
+        int n=arr.length;
+        int i=0;
+        while(i<n)
+        {
+            if(arr[i]>largest)
+            {
+                second_largest=largest;
+                largest=arr[i];
+                 //System.out.println("hi"+largest);
+               
+            }
+           else if(arr[i]!=largest && arr[i]>second_largest)
+            {
+                    second_largest=arr[i];
+                //System.out.println(second_largest);
+            }
+            i++;
+        }
+        return second_largest;
+    }
+
+}

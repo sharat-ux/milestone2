@@ -1,0 +1,27 @@
+public class Solution {  
+
+    public static void rotate(int[] arr, int d) {
+    	//Your code goes here
+        int arr3[]=new int[d];
+        int i=0;
+        while(i<d)
+        {
+            arr3[i]=arr[i];
+            i++;
+        }
+        i=0;
+        while(i+d<arr.length)
+        {
+            arr[i]=arr[i+d];
+            i++;
+        }
+        int t=0,t1=d;
+        while(t<t1)
+        {
+            arr[arr.length-d]=arr3[t];
+            t++;
+            d--;
+        }
+    }
+
+}
