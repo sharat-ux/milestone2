@@ -1,0 +1,49 @@
+public class Solution{  
+
+    public static int findUnique(int[] arr){
+		//Your code goes here
+
+        int n=arr.length,count;
+        
+        if(n==1)
+        {
+            return arr[0];
+        }
+        
+        for(int i=0;i<arr.length;i++)
+        {
+            //count=0;
+            int j=0;
+            for(;j<arr.length;j++)
+            {
+                // if( j!=i &&arr[i]==arr[j])
+                // {
+                //     //count++;
+                //     break;
+                // }
+                if(i==j){
+                    continue;
+                    
+                }else if(arr[i]==arr[j]){
+                    break;
+                    
+                }
+                
+                // if(j==n-1 &&arr[i]!=arr[j])
+                // {
+                //     return arr[i];
+                //     //count++;
+                // }
+            }
+            if(j==n){
+                return arr[i];
+                
+            }
+            /*if(count==1)
+            {
+                return arr[i];
+            }*/
+        }
+        return Integer.MAX_VALUE;
+    }
+}

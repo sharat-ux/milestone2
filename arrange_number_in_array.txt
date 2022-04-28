@@ -1,0 +1,35 @@
+public class Solution {
+    
+    public static void arrange(int[] arr, int n) {
+    	//Your code goes here
+        int n1=arr.length;
+        int val=1,s=0,e=n-1;
+        int i=0,n2;
+        if(n%2==0)
+        {
+          n2=(n-1)/2 ; 
+        }
+        else
+        {
+            n2=(n)/2;
+        }
+        while(i<n1)
+        {
+            if(s<=n2)
+            {
+            arr[s]=val;
+            val++;
+            s++;
+            }
+            if(e>n2)
+            {
+            arr[e]=val;
+                //System.out.println(val);
+            val++;
+            e--;
+            }
+            i++;
+        }
+        
+    }
+}
